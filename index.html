@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .carousel img {
+            max-height: 690px;
+            object-fit: cover;
+            margin: 20px auto;
+            padding: 10px;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .section {
+            padding: 60px 20px;
+        }
+        .footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .dropdown-menu {
+            min-width: 200px;
+        }
+        .scroll-section {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .scroll-section.right {
+            transform: translateX(100px);
+        }
+        .scroll-active {
+            opacity: 1 !important;
+            transform: translateX(0) !important;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">My School</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="academicsDropdown" role="button" data-bs-toggle="dropdown">Academics</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="curriculum.html">Curriculum</a></li>
+                            <li><a class="dropdown-item" href="subjects.html">Subjects Offered</a></li>
+                            <li><a class="dropdown-item" href="resources.html">Academic Resources</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="teachersDropdown" role="button" data-bs-toggle="dropdown">Teachers</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="teacher-list.html">Teacher Names</a></li>
+                            <li><a class="dropdown-item" href="teacher-subjects.html">Subjects Taught</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+	<!-- Slideshow -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="def1.jpg"class="d-block w-100" alt="School Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="def2.jpg" class="d-block w-100" alt="School Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="def3.jpg" class="d-block w-100" alt="School Image 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+	
+	<!-- Scrolling Arrow -->
+	
+	
+    <!-- Scrolling Sections -->
+    <section class="section">
+        <div class="container">
+            <div class="row align-items-center scroll-section">
+                <div class="col-md-6">
+                    <img src="1.jpg" class="img-fluid" alt="School Image">
+                </div>
+                <div class="col-md-6">
+                    <h2>ទៅផឹក</h2>
+                    <p>ពួកអាដែងDÉFទៅផឹកនៅបន្ទាយ សៀមរាប</p>
+                </div>
+            </div>
+            <div class="row align-items-center scroll-section right mt-5">
+                <div class="col-md-6 order-md-2">
+                    <img src="2.jpg" class="img-fluid" alt="Students Image">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h2>Dg s'ey ter</h2>
+                    <p>ពួកអាដែងDÉFទៅជិះកន្ត្រកវិល.</p>
+                </div>
+            </div>
+            <div class="row align-items-center scroll-section mt-5">
+                <div class="col-md-6">
+                    <img src="4.jpg" class="img-fluid" alt="Library Image">
+                </div>
+                <div class="col-md-6">
+                    <h2>wo eh eh</h2>
+                    <p>ក្មេងតូច ពិសី ផឹកបានតិចរត់ចោល.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 My School. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("scroll", function() {
+            let sections = document.querySelectorAll(".scroll-section");
+            let scrollPosition = window.innerHeight * 0.8;
+            sections.forEach(section => {
+                let position = section.getBoundingClientRect().top;
+                if (position < scrollPosition) {
+                    section.classList.add("scroll-active");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
